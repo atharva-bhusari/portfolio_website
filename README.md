@@ -54,6 +54,15 @@ portfolio/
 
 3. Open `index.html` in a browser.
 
+### Vercel Deployment
+
+The `config.js` file is gitignored, so Vercel generates it at build time using `vercel.json`.
+
+1. Add an environment variable in **Vercel Dashboard > Settings > Environment Variables**:
+   - Name: `WEB3FORMS_ACCESS_KEY`
+   - Value: your access key from Web3Forms
+2. Deploy — Vercel will automatically create `config.js` with your key during the build step.
+
 ## Customization
 
 - **Content** — Edit sections directly in `index.html`
