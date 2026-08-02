@@ -25,12 +25,30 @@ A single-page portfolio website built with pure HTML, CSS, and JavaScript.
 ```
 portfolio/
 ├── index.html          # Main page
-├── style.css           # Styles
-├── script.js           # Scroll animations, nav toggle, form handler
+├── script.js           # Entry point — wires up the js/ modules
 ├── config.js           # API keys (gitignored)
 ├── .env                # Environment reference (gitignored)
 ├── .gitignore
 ├── README.md
+├── css/                 # One stylesheet per section, linked individually in index.html
+│   ├── base.css         # Reset, typography, container
+│   ├── navbar.css
+│   ├── hero.css
+│   ├── sections.css     # Shared .section/.section-title styles
+│   ├── about.css
+│   ├── skills.css
+│   ├── experience.css   # Timeline
+│   ├── projects.css
+│   ├── education.css
+│   ├── certifications.css
+│   ├── contact.css
+│   ├── footer.css
+│   ├── animations.css   # Scroll fade-in
+│   └── responsive.css   # Media queries
+├── js/                  # ES modules imported by script.js
+│   ├── nav.js            # Navbar scroll shadow + mobile toggle
+│   ├── scrollAnimations.js
+│   └── contactForm.js    # Web3Forms submit handler
 └── images/
     ├── 26040568.jpg    # Profile photo
     └── favicon/        # Favicon set for all platforms
@@ -52,7 +70,11 @@ portfolio/
    ```
    Get a free access key at [web3forms.com](https://web3forms.com).
 
-3. Open `index.html` in a browser.
+3. `script.js` is an ES module, which browsers block from `file://` pages via CORS — serve the folder over HTTP instead of double-clicking `index.html`:
+   ```bash
+   npx serve .
+   # or: python -m http.server 8000
+   ```
 
 ### Vercel Deployment
 
@@ -66,5 +88,6 @@ The `config.js` file is gitignored, so Vercel generates it at build time using `
 ## Customization
 
 - **Content** — Edit sections directly in `index.html`
-- **Styling** — Modify colors, spacing, and typography in `style.css`
+- **Styling** — Each section has its own file under `css/`; edit the relevant one (e.g. `css/projects.css` for the project cards)
+- **Behavior** — Each concern has its own module under `js/`; `script.js` just imports and calls them
 - **Contact email** — Register a new email at Web3Forms and update the key in `config.js`

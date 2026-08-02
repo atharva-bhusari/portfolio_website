@@ -1,0 +1,57 @@
+/* ========================================
+   Projects Grid
+   ======================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 28px;
+  transition: box-shadow 0.25s, transform 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transform: translateY(-3px);
+}
+
+.project-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.project-date {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #475569;
+  flex: 1;
+  margin-bottom: 14px;
+}
+
+.project-link {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #3b82f6;
+  margin-top: auto;
+}
+
+.project-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}

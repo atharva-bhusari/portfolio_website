@@ -1,0 +1,30 @@
+/* ========================================
+   Sections
+   ======================================== */
+
+.section {
+  padding: 88px 0;
+}
+
+.section-alt {
+  background: #ffffff;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #3b82f6;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}

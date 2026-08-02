@@ -1,0 +1,37 @@
+/* ========================================
+   About
+   ======================================== */
+
+.about-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.about-highlights {
+  list-style: none;
+  margin: 16px 0 24px;
+  padding: 0;
+}
+
+.about-highlights li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+.about-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3b82f6;
+}

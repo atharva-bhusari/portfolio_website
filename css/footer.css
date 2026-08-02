@@ -1,0 +1,33 @@
+/* ========================================
+   Footer
+   ======================================== */
+
+.footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 32px 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-content p {
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
